@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Git checkout') {
             steps {
-                git 'https://github.com/austinobioma/java-project.git'
+                git 'git 'https://github.com/austinobioma/FebClassProject1.git'
             }
         }
       stage('Build') {
             steps {
-               sh 'cd MyWebApp && mvn clean  package'
+               sh 'mvn clean  package'
             }
         }
       stage('Test') {
             steps {
-                sh 'cd MyWebApp && mvn test'
+                sh 'mvn test'
             }
         }
       stage('Deploy to tomcat') {
