@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Git checkout') {
             steps {
-                git 'git 'https://github.com/austinobioma/FebClassProject1.git'
+                git 'https://github.com/austinobioma/FebClassProject1.git'
             }
         }
       stage('Build') {
