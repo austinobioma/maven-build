@@ -4,24 +4,24 @@ pipeline {
     stages {
         stage('Git checkout') {
             steps {
-                git 'https://github.com/austinobioma/java-project.git'
+                git 'https://github.com/austinobioma/FebClassProject1.git'
             }
         }
       stage('Build') {
             steps {
-               sh 'cd MyWebApp && mvn clean  package'
+               sh 'cd webapp && mvn clean  package'
             }
         }
       stage('Test') {
             steps {
-                sh 'cd MyWebApp && mvn test'
+                sh 'cd webapp && mvn test'
             }
         }
      stage ('Code Qualty Scan') {
             steps {
                withSonarQubeEnv('sonar') 
                {
-              sh "mvn -f MyWebApp/pom.xml sonar:sonar"
+              sh "mvn -f webapp/pom.xml sonar:sonar"
             }
                 }
         }
