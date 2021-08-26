@@ -80,7 +80,17 @@
           <version>2.4</version>
         </plugin>
 
-      
+        <properties>
+            <!-- Optional URL to server. Default value is http://localhost:9000 -->
+            <sonar.host.url>
+              http://34.239.245.64:9000
+            </sonar.host.url>
+        </properties>   
+        <plugin>
+          <groupId>org.sonarsource.scanner.maven</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>3.2</version>
+        </plugin>
 
         <plugin>
           <artifactId>maven-surefire-report-plugin</artifactId>
