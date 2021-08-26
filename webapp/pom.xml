@@ -25,12 +25,6 @@
       </plugin>
     </plugins>
   </build>
-
-   <plugin>
-      <groupId>org.sonarsource.scanner.maven</groupId>
-        <artifactId>sonar-maven-plugin</artifactId>
-        <version>3.2</version>
-  </plugin>
          
   <dependencies>
 
@@ -53,5 +47,11 @@
               http://34.239.245.64:9000
             </sonar.host.url>
         </properties>
+         
+    <plugin>
+      <groupId>org.sonarsource.scanner.maven</groupId>
+      <artifactId>sonar-maven-plugin</artifactId>
+      <version>3.2</version>
+  </plugin>
 
 </project>
