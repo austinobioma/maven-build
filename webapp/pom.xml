@@ -25,7 +25,7 @@
       </plugin>
       <plugin>
         <groupId>org.sonarsource.scanner.maven</groupId>
-        <artifactId>sonar</artifactId>
+        <artifactId>sonar-maven-plugin</artifactId>
         <version>3.2</version>
       </plugin>      
     </plugins>
@@ -44,6 +44,14 @@
       <artifactId>jsp-api</artifactId>
       <scope>provided</scope>
     </dependency>
+           
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-plugin-api</artifactId>
+      <version>${mavenVersion}</version>
+      <scope>provided</scope>
+    </dependency>
+           
   </dependencies>
          
 </project>
