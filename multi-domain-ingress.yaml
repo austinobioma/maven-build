@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: name-virtual-host-ingress
+spec:
+  rules:
+  - host: analytics.myapp.com
+    http:
+      paths:
+        backend:
+          serviceName: analytic-service
+          servicePort: 3000
+  - host: shopping.myapp.com
+    http:
+      paths:
+        backend:
+          serviceName: shopping-service
+          servicePort: 8080           
